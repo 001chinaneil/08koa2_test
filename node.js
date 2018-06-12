@@ -25,6 +25,40 @@
 /*
 * 1.可以从上下文ctx接收，也可以从request中接收。
 * 2.接收之后返回分2种形式: query(json格式) 和 querystring(字符串格式)；
-* 3.重点是app.use(async(ctx) => {});
+* 3.重点是app.use(async(ctx) => {
+*   //从request中获取GET请求
+    let request =ctx.request;
+    let req_query = request.query;
+    let req_querystring = request.querystring;
+
+    //从上下文中直接获取
+    let ctx_query = ctx.query;
+    let ctx_querystring = ctx.querystring;
+
+    ctx.body={
+        url,
+        req_query,
+        req_querystring,
+        ctx_query,
+        ctx_querystring
+    }
+* });
+* */
+
+//第四节 POST请求的接收(1)
+/*
+* 1.获取POST请求参数的步骤
+*   a.解析上下文ctx中的原生node.js对象req。
+*   b.将post表单数据解析成query string--字符串形式。
+*   c.再把字符串形式解析成JSON格式。
+* 2.ctx.request 和 ctx.req的区别
+*   a.ctx.request是Koa2封装好的解析参数的方法，更简单。
+*   b.ctx.req是原生node.js http对象，里面的信息更全，方便深度编程。
+* 3.ctx.method可以得到请求的类型是GET还是POST。
+* */
+
+//第五节 POST请求的接收(2)(学不下去了，先把潜在需求处理下，去掉一个心病。)
+/*
+* 1.
 * */
 
