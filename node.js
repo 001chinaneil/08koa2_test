@@ -57,8 +57,23 @@
 * 3.ctx.method可以得到请求的类型是GET还是POST。
 * */
 
-//第五节 POST请求的接收(2)(学不下去了，先把潜在需求处理下，去掉一个心病。)
+//第五节 POST请求的接收(2)(学不下去了，先把潜在需求处理下，去掉一个心病。)(需要细致的理解编码一遍)
 /*
 * 1.
+* */
+
+//第六节 koa-bodyparser中间件
+/*
+* 1.koa-bodyparser中间件可以把koa2的formData数据解析到ctx.request.body。
+* 2.在文件头部引入koa-bodyparser，
+* 3.并使用: app.use(bodyparser());
+* 4.Koa是一个基于Node平台的后端框架
+* */
+
+//第七节 Koa2原生路由的实现
+/*
+* 1.ctx.request.url可以获得访问路径
+* 2.根据请求的url获取本地文件，再把文件返回给浏览器。
+* 3.用到了fs文件系统 fs.readFile("文件路径","binary",function(){}); //binary代表二进制数据格式
 * */
 
