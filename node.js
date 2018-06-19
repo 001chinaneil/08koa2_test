@@ -67,13 +67,30 @@
 * 1.koa-bodyparser中间件可以把koa2的formData数据解析到ctx.request.body。
 * 2.在文件头部引入koa-bodyparser，
 * 3.并使用: app.use(bodyparser());
-* 4.Koa是一个基于Node平台的后端框架
+* 4.Koa是一个基于Node平台的后端框架，JS是后端开发语言。
 * */
 
-//第七节 Koa2原生路由的实现
+//第七节 Koa2原生路由的实现(Koa获取文件返回的中文乱码)
 /*
 * 1.ctx.request.url可以获得访问路径
 * 2.根据请求的url获取本地文件，再把文件返回给浏览器。
 * 3.用到了fs文件系统 fs.readFile("文件路径","binary",function(){}); //binary代表二进制数据格式
+* */
+
+//第八节 Koa-router中间件(1) 入门
+/*
+* 1.延伸: Koa框架的MVC框架的代码分布和功能？从连接数据库，操作数据库(正删改查)，提交数据接口，功能的划分，
+*   在实际项目的是如何处理的？
+* 2.app.use(router.routes())
+        .use(router.allowedMethods());
+* */
+
+//第九节 Koa-router中间件(2) 层级
+/*
+* 1.设置前缀:
+*   const router = new Router({
+*       prefix: "/jspang"
+*   });
+* 2.路由层级: router.use("/page",page.routes(),page.allowedMethods());
 * */
 

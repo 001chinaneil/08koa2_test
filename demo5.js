@@ -45,9 +45,10 @@ app.use(async (ctx)=>{
     let url = ctx.request.url;
     let html = await router(url);
     console.log(html);
-    ctx.body = html;
+    ctx.response.type = 'html';
+    ctx.response.body = html; //返回给浏览器客户端
 });
 
-app.listen(3010,()=>{
-    console.log("[demo] coding running at port 3010");
+app.listen(3014,()=>{
+    console.log("[demo] coding running at port 3014");
 });
