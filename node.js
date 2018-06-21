@@ -115,3 +115,17 @@
 *   overwrite: //是否允许重写
 * */
 
+//第十二节 Koa2的模板初识(ejs) (可以拓展开来继续深入) demo10.js
+/*
+* 1.需要koa-views(需安装)和path(仅需要引入)
+* app.use(Views(Path.join(__dirname,'./view'),{
+    extension: "ejs"
+  }));
+* */
+
+//第十三节 Koa-static静态资源中间件
+/*
+* 1.需要koa-static(需安装)和path(需引入)，
+* 2.Path.join(__dirname,staticPublic)  __dirname返回当前项目绝对路径
+* */
+
