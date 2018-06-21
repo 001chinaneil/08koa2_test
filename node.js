@@ -81,6 +81,7 @@
 /*
 * 1.延伸: Koa框架的MVC框架的代码分布和功能？从连接数据库，操作数据库(正删改查)，提交数据接口，功能的划分，
 *   在实际项目的是如何处理的？
+*   a.基于表(Table)的一对多的数据关系是关系数据库的基础。MySQL就是个查询数据库的软件。
 * 2.app.use(router.routes())
         .use(router.allowedMethods());
 * */
@@ -92,5 +93,25 @@
 *       prefix: "/jspang"
 *   });
 * 2.路由层级: router.use("/page",page.routes(),page.allowedMethods());
+* */
+
+//第十节 Koa-router中间件(3) 参数
+/*
+* 1.ctx.body = ctx.query; //接收GET参数
+* */
+
+//第十一节 Koa2中使用Cookie
+/*
+* 1.制作登录和保存用户信息在本地，比如用户登录后，一周内不用重新登录即可访问资源，Koa的上下文(ctx)
+*   直接提供了读取和写入的方法。
+* 2.ctx.cookies.get(name,[option]);
+*   ctx.cookies.set(name,value,[option]);
+* 3.cookie选项:
+*   domain: //写入cookie所在的域名
+*   path: //写入cookie所在的路径
+*   maxAge: //写入cookie最大有效时间
+*   expires: //cookie失效时间
+*   httpOnly: //是否只允许http请求中获得
+*   overwrite: //是否允许重写
 * */
 
